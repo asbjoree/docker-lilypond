@@ -1,5 +1,5 @@
 [submodule "lilyjazz"]
-	path = lilyjazz
+	path = plugins/lilyjazz
 	url = https://github.com/OpenLilyPondFonts/lilyjazz.git
 [submodule "lilypond"]
 	path = lilypond
@@ -7,3 +7,6 @@
 [submodule "guile"]
 	path = guile
 	url = git://git.sv.gnu.org/guile.git
+[submodule "plugins/lilypond-roman-numeral-tool"]
+	path = plugins/lilypond-roman-numeral-tool
+	url = https://github.com/davidnalesnik/lilypond-roman-numeral-tool.git
