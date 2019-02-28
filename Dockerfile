@@ -1,7 +1,5 @@
 FROM ubuntu
 
-COPY lilypond /root/lilypond
-COPY plugins /root/plugins
 COPY guile /root/guile
 
 RUN sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
@@ -17,6 +15,8 @@ RUN make
 RUN make install
 RUN ldconfig
 
+COPY lilypond /root/lilypond
+
 WORKDIR /root/lilypond
 RUN ./autogen.sh --noconfigure
 RUN mkdir build
@@ -26,3 +26,4 @@ RUN ../configure
 RUN make
 RUN make install
 
+COPY plugins /root/plugins
