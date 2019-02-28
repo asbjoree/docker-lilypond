@@ -17,12 +17,12 @@ RUN make
 RUN make install
 RUN ldconfig
 
-#WORKDIR /root/lilypond-git
-#RUN ./autogen.sh --noconfigure
-#RUN mkdir build
-#
-#WORKDIR /root/lilypond-git/build
-#RUN ../configure
-#RUN make
-#RUN make install
+WORKDIR /root/lilypond
+RUN ./autogen.sh --noconfigure
+RUN mkdir build
+
+WORKDIR /root/lilypond/build
+RUN ../configure
+RUN make
+RUN make install
 
