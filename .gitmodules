@@ -1,6 +1,6 @@
 [submodule "lilyjazz"]
 	path = plugins/lilyjazz
-	url = https://github.com/OpenLilyPondFonts/lilyjazz.git
+	url = https://github.com/asbjoree/lilyjazz.git
 [submodule "lilypond"]
 	path = lilypond
 	url = git://git.sv.gnu.org/lilypond.git
