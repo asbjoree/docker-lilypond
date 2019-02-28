@@ -1,0 +1,9 @@
+[submodule "lilyjazz"]
+	path = lilyjazz
+	url = https://github.com/OpenLilyPondFonts/lilyjazz.git
+[submodule "lilypond"]
+	path = lilypond
+	url = git://git.sv.gnu.org/lilypond.git
+[submodule "guile"]
+	path = guile
+	url = git://git.sv.gnu.org/guile.git
