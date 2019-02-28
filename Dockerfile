@@ -1,7 +1,7 @@
 FROM ubuntu
 
 COPY lilypond /root/lilypond
-COPY lilyjazz /root/lilyjazz
+COPY plugins /root/plugins
 COPY guile /root/guile
 
 RUN sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
