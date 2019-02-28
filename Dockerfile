@@ -6,7 +6,7 @@ RUN sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
 RUN apt-get update
 #RUN apt-get install -y git software-properties-common
 RUN apt-get build-dep -y lilypond
-RUN apt-get install -y autoconf install-info fonts-texgyre texlive-lang-cyrillic libunistring-dev libffi-dev libgc-dev
+RUN apt-get install -y autoconf install-info fonts-texgyre texlive-lang-cyrillic
 
 WORKDIR /root/guile
 RUN ./autogen.sh
