@@ -10,3 +10,6 @@
 [submodule "plugins/lilypond-roman-numeral-tool"]
 	path = plugins/lilypond-roman-numeral-tool
 	url = https://github.com/davidnalesnik/lilypond-roman-numeral-tool.git
+[submodule "plugins/lilymusic"]
+	path = plugins/lilymusic
+	url = https://github.com/wbsoft/lilymusic.git

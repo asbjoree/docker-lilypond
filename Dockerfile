@@ -38,3 +38,6 @@ RUN cp /root/plugins/lilyjazz/stylesheet/*.ily /usr/local/share/lilypond/*/ly/
 RUN cp /root/plugins/lilyjazz/otf/* /usr/local/share/lilypond/*/fonts/otf/
 RUN cp /root/plugins/lilyjazz/svg/* /usr/local/share/lilypond/*/fonts/svg/
 RUN cp /root/plugins/lilyjazz/supplementary-files/*/*.otf /usr/local/share/lilypond/*/fonts/otf/
+
+# Merge-rests
+RUN cp /root/plugins/lilymusic/include/merge-rests.ily /usr/local/share/lilypond/*/ly/
