@@ -16,3 +16,12 @@
 [submodule "plugins/lilypond-clairnote"]
 	path = plugins/lilypond-clairnote
 	url = https://gitlab.com/paulmorris/lilypond-clairnote
+[submodule "plugins/gonville"]
+	path = plugins/gonville
+	url = https://github.com/OpenLilyPondFonts/gonville
+[submodule "plugins/bravura"]
+	path = plugins/bravura
+	url = https://github.com/OpenLilyPondFonts/bravura
+[submodule "plugins/improviso"]
+	path = plugins/improviso
+	url = https://github.com/OpenLilyPondFonts/improviso

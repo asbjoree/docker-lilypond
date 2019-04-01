@@ -49,3 +49,19 @@ RUN cp /root/plugins/non-git/swing/*.scm /usr/local/share/lilypond/*/scm/
 # Clairnote
 RUN cp /root/plugins/lilypond-clairnote/clairnote.ly /root/plugins/lilypond-clairnote/clairnote.ily
 RUN cp /root/plugins/lilypond-clairnote/clairnote.ily /usr/local/share/lilypond/*/ly/
+
+# Fonts
+RUN cp /root/plugins/non-git/fonts/*.ily /usr/local/share/lilypond/*/ly/
+
+# Bravura
+RUN cp /root/plugins/bravura/otf/* /usr/local/share/lilypond/*/fonts/otf/
+RUN cp /root/plugins/bravura/svg/* /usr/local/share/lilypond/*/fonts/svg/
+
+# Gonville
+RUN cp /root/plugins/gonville/otf/* /usr/local/share/lilypond/*/fonts/otf/
+RUN cp /root/plugins/gonville/svg/* /usr/local/share/lilypond/*/fonts/svg/
+
+# Improviso
+RUN cp /root/plugins/improviso/otf/* /usr/local/share/lilypond/*/fonts/otf/
+RUN cp /root/plugins/improviso/svg/* /usr/local/share/lilypond/*/fonts/svg/
+RUN cp /root/plugins/improviso/supplementary-fonts/*.otf /usr/local/share/lilypond/*/fonts/otf/
