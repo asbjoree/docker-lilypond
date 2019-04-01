@@ -19,12 +19,12 @@
 [submodule "plugins/gonville"]
 	path = plugins/gonville
 	url = https://github.com/OpenLilyPondFonts/gonville
-[submodule "plugins/bravura"]
-	path = plugins/bravura
-	url = https://github.com/OpenLilyPondFonts/bravura
 [submodule "plugins/improviso"]
 	path = plugins/improviso
 	url = https://github.com/OpenLilyPondFonts/improviso
 [submodule "plugins/snippets"]
 	path = plugins/snippets
 	url = https://github.com/openlilylib/snippets
+[submodule "plugins/profondo"]
+	path = plugins/profondo
+	url = https://github.com/OpenLilyPondFonts/profondo.git
