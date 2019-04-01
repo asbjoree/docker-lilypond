@@ -45,3 +45,7 @@ RUN cp /root/plugins/lilymusic/include/merge-rests.ily /usr/local/share/lilypond
 # Swing
 RUN cp /root/plugins/non-git/swing/*.ily /usr/local/share/lilypond/*/ly/
 RUN cp /root/plugins/non-git/swing/*.scm /usr/local/share/lilypond/*/scm/
+
+# Clairnote
+RUN cp /root/plugins/lilypond-clairnote/clairnote.ly /root/plugins/lilypond-clairnote/clairnote.ily
+RUN cp /root/plugins/lilypond-clairnote/clairnote.ily /usr/local/share/lilypond/*/ly/

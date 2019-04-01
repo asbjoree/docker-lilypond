@@ -13,3 +13,6 @@
 [submodule "plugins/lilymusic"]
 	path = plugins/lilymusic
 	url = https://github.com/wbsoft/lilymusic.git
+[submodule "plugins/lilypond-clairnote"]
+	path = plugins/lilypond-clairnote
+	url = https://gitlab.com/paulmorris/lilypond-clairnote
