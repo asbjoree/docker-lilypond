@@ -1,2 +1,4 @@
 \include "definitions.ily"
-\bravuraOn
+\paper {
+    \bravuraOn
+}
