@@ -54,6 +54,7 @@ RUN cp /root/plugins/lilypond-clairnote/clairnote.ily /usr/local/share/lilypond/
 RUN cp /root/plugins/non-git/fonts/*.ily /usr/local/share/lilypond/*/ly/
 
 # Bravura
+RUN cp /root/plugins/snippets/custom-music-fonts/smufl/*.ily /usr/local/share/lilypond/*/ly/
 RUN cp /root/plugins/bravura/otf/* /usr/local/share/lilypond/*/fonts/otf/
 RUN cp /root/plugins/bravura/svg/* /usr/local/share/lilypond/*/fonts/svg/
 

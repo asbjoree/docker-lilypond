@@ -25,3 +25,6 @@
 [submodule "plugins/improviso"]
 	path = plugins/improviso
 	url = https://github.com/OpenLilyPondFonts/improviso
+[submodule "plugins/snippets"]
+	path = plugins/snippets
+	url = https://github.com/openlilylib/snippets
