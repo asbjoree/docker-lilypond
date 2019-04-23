@@ -42,6 +42,9 @@ RUN cp /root/plugins/lilyjazz/supplementary-files/*/*.otf /usr/local/share/lilyp
 # Merge-rests
 RUN cp /root/plugins/lilymusic/include/merge-rests.ily /usr/local/share/lilypond/*/ly/
 
+# Ez-numbers
+RUN cp /root/plugins/non-git/ez-numbers/ez-numbers.ily /usr/local/share/lilypond/*/ly/
+
 # Swing
 RUN cp /root/plugins/non-git/swing/*.ily /usr/local/share/lilypond/*/ly/
 RUN cp /root/plugins/non-git/swing/*.scm /usr/local/share/lilypond/*/scm/
