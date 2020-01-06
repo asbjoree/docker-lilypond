@@ -45,6 +45,9 @@ RUN cp /root/plugins/lilymusic/include/merge-rests.ily /usr/local/share/lilypond
 # Ez-numbers
 RUN cp /root/plugins/non-git/ez-numbers/ez-numbers.ily /usr/local/share/lilypond/*/ly/
 
+# Functional
+RUN cp /root/plugins/non-git/functional/functional.ily /usr/local/share/lilypond/*/ly/
+
 # Swing
 RUN cp /root/plugins/non-git/swing/*.ily /usr/local/share/lilypond/*/ly/
 RUN cp /root/plugins/non-git/swing/*.scm /usr/local/share/lilypond/*/scm/
