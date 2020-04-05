@@ -68,6 +68,33 @@ fExtend =
 % ----- cross out the letter for "shortened dominants" (where base is omitted):
 % ---------------------------------------------------------------
 
+#(define-markup-command (prepend layout props prefix letter)
+   (markup? markup?)
+   (interpret-markup layout props
+     #{
+       \markup{
+         \concat {
+           \override #`(direction . ,UP)
+           \override #'(baseline-skip . 0.8)
+           \dir-column {
+             " "
+             {
+               \override #`(direction . ,UP)
+               \override #'(baseline-skip . 1.3)
+               \tiny $prefix
+             }
+           }
+           \override #'(baseline-skip . 0.4)
+           \left-column {
+             $letter            
+           }
+         }
+       }
+     #}))
+% ---------------------------------------------------------------
+% ----- Prepend a superscript prefix for 
+% ---------------------------------------------------------------
+
 #(define-markup-command (crossout layout props letter)
    (markup?)
    (interpret-markup layout props
@@ -78,9 +105,9 @@ fExtend =
            \left-column {
              $letter
              \with-dimensions #'(-0.0 . 0.0) #'(0 . 0)
-             \translate-scaled #'(-0.3 . 0.3)
+             \translate-scaled #'(-0.2 . 0.6)
              \with-dimensions #'(-0.0 . 0.0) #'(0 . 0)
-             \draw-line #'(2.3 . 1.8)
+             \draw-line #'(2 . 1.1)
            }
          }
        }
@@ -107,11 +134,70 @@ fExtend =
      #}))
 
 % ---------------------------------------------------------------
+% ----- triple-printed letters for double dominant or double subdominant:
+% ---------------------------------------------------------------
+
+#(define-markup-command (triple layout props letter)
+   (markup?)
+   (interpret-markup layout props
+     #{
+       \markup{
+         \concat {
+           \override #'(baseline-skip . 0.4)
+           \left-column {
+             $letter
+             \with-dimensions #'(-0.4 . 0.6) #'(0 . 0)
+             $letter
+             \with-dimensions #'(-0.8 . 1.6) #'(0 . 0)
+             $letter
+           }
+         }
+       }
+     #}))
+
+% ---------------------------------------------------------------
+% cursive lowercase s
+% ---------------------------------------------------------------
+cursiveS = \markup
+
+\with-dimensions #'(0 . 1.3) #'(0.05 . 0)
+\path #0.15 
+#'((rmoveto 0 0.3)
+   (rlineto 0.8 1.0)
+   (rcurveto 0 0 -0.1 -0.2 0.1 -0.4)
+   (rcurveto 0 0 0.4 -0.3 -0.1 -0.6)
+   (rcurveto 0 0 -0.1 -0.05 -0.2 0.06)
+   )
+
+% ---------------------------------------------------------------
+% ----- double-printed letters for double dominant or double subdominant:
+% ---------------------------------------------------------------
+
+#(define-markup-command (doubleFunction layout props func letter)
+   (markup? markup?)
+   (interpret-markup layout props
+     #{
+       \markup{
+         \raise #1 \concat {
+           \override #'(baseline-skip . -1.4)
+           \left-column {
+             \override #`(direction . ,UP)
+             \tiny $func
+             \with-dimensions #'(0.6 . 1.5) #'(0 . 1)
+             $letter
+           }
+         }
+       }
+     #}))
+
+% ---------------------------------------------------------------
 % opening round bracket before a chord:
 % ---------------------------------------------------------------
 
 openbracket = { \set stanza = \markup {\normal-text \magnify #1.1 " ("} }
 backwardsbracket = { \set stanza = \markup {\normal-text \magnify #1.1 " ←("} }
+opendoublebracket = { \set stanza = \markup {\normal-text \magnify #1.1 " [("} }
+opentriplebracket = { \set stanza = \markup {\normal-text \magnify #1.1 " {[("} }
 
 % ---------------------------------------------------------------
 % ----- layout
@@ -126,4 +212,3 @@ backwardsbracket = { \set stanza = \markup {\normal-text \magnify #1.1 " ←("} 
     \override LyricExtender.extra-offset = #'(0 . 0.5)
   }
 }
-
