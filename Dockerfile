@@ -4,16 +4,8 @@ COPY guile /root/guile
 
 RUN sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
 RUN apt-get update
-#RUN apt-get install -y git software-properties-common
 RUN apt-get build-dep -y lilypond
-RUN apt-get install -y autoconf install-info fonts-texgyre texlive-lang-cyrillic
-
-WORKDIR /root/guile
-RUN ./autogen.sh
-RUN ./configure --disable-error-on-warning --prefix=/usr/local
-RUN make
-RUN make install
-RUN ldconfig
+RUN apt-get install -y autoconf fonts-texgyre texlive-lang-cyrillic texlive-font-utils guile-2.2-dev install-info
 
 COPY lilypond /root/lilypond
 
@@ -23,7 +15,7 @@ RUN mkdir build
 
 WORKDIR /root/lilypond/build
 RUN ../configure
-RUN make
+RUN make -j 4
 RUN make install
 
 COPY plugins /root/plugins
