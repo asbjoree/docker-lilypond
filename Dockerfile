@@ -1,7 +1,5 @@
 FROM ubuntu
 
-COPY guile /root/guile
-
 RUN sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get build-dep -y lilypond
@@ -23,7 +21,7 @@ COPY plugins /root/plugins
 WORKDIR /root/
 
 # Roman numerals
-RUN cp /root/plugins/lilypond-roman-numeral-tool/roman_numeral_analysis_tool.ily /usr/local/share/lilypond/*/ly/
+RUN cp /root/plugins/non-git/lilypond-roman-numeral-tool/roman_numeral_analysis_tool.ily /usr/local/share/lilypond/*/ly/
 
 # Lilyjazz
 RUN cp /root/plugins/lilyjazz/stylesheet/*.ily /usr/local/share/lilypond/*/ly/
